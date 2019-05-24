@@ -1,6 +1,6 @@
 package sandez.com.intive.discounts;
 
-import sandez.com.intive.user.User;
+import sandez.com.intive.model.User;
 
 public class DiscountFactory {
 

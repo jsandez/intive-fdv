@@ -4,7 +4,7 @@ import java.time.LocalDateTime;
 
 public abstract class RentType {
 
-	private LocalDateTime startDate;
+	protected LocalDateTime startDate;
 
 	public RentType(LocalDateTime startDate) {
 		this.startDate = startDate;

@@ -1,18 +1,20 @@
 package sandez.com.intive.rents;
 
 import java.time.LocalDateTime;
+import java.time.temporal.ChronoUnit;
 
-public class RentByWeek extends RentType{
+public class RentByWeek extends RentType {
+
+	private static final int CHARGE = 60;
 
 	public RentByWeek(LocalDateTime startDate) {
 		super(startDate);
-		// TODO Auto-generated constructor stub
 	}
 
 	@Override
 	public double charge(LocalDateTime endDate) {
-		// TODO Auto-generated method stub
-		return 0;
+		long hours = ChronoUnit.WEEKS.between(this.startDate, endDate);
+		return hours * CHARGE;
 	}
 
 }

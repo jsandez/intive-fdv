@@ -1,18 +1,20 @@
 package sandez.com.intive.rents;
 
 import java.time.LocalDateTime;
+import java.time.temporal.ChronoUnit;
 
 public class RentByHour extends RentType{
+	
+	private static final int CHARGE = 5;
 
 	public RentByHour(LocalDateTime startDate) {
 		super(startDate);
-		// TODO Auto-generated constructor stub
 	}
 
 	@Override
 	public double charge(LocalDateTime endDate) {
-		// TODO Auto-generated method stub
-		return 0;
+		long hours = ChronoUnit.HOURS.between(this.startDate, endDate);
+		return hours * CHARGE;
 	}
 
 }

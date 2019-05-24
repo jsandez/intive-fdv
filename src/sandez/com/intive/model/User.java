@@ -1,0 +1,25 @@
+package sandez.com.intive.model;
+
+import java.util.List;
+
+public class User {
+
+	private String userId;
+	private List<Rent> rents;
+
+	public String getUserId() {
+		return userId;
+	}
+
+	public List<Rent> getRents() {
+		return rents;
+	}
+
+	public void setRents(List<Rent> rents) {
+		rents.addAll(rents);
+	}
+
+	public void setUserId(String userId) {
+		this.userId = userId;
+	}
+}
