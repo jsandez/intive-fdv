@@ -30,4 +30,5 @@ target/*
 .project
 .classpath
 .factorypath
+bin/*
 
