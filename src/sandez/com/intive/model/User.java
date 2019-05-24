@@ -1,5 +1,6 @@
 package sandez.com.intive.model;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class User {
@@ -16,7 +17,7 @@ public class User {
 	}
 
 	public void setRents(List<Rent> rents) {
-		rents.addAll(rents);
+		this.rents = rents;
 	}
 
 	public void setUserId(String userId) {
