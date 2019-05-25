@@ -1,6 +1,7 @@
 package sandez.com.intive.model;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;
 
 import java.time.LocalDateTime;
@@ -22,6 +23,7 @@ public class RentTest {
 		assertTrue(rent.getPrice() == 0);
 		assertEquals(rent.getRentId(), "1");
 		assertEquals(rent.getUserId(), "1");
+		assertNotNull(rent.getRentType());
 	}
 
 }

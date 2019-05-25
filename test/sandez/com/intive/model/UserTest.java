@@ -15,7 +15,6 @@ public class UserTest {
 
 		uTest.setUserId("1");
 		uTest.setRents(new ArrayList<Rent>());
-
 		assertEquals(uTest.getUserId(), "1");
 		assertNotNull(uTest.getRents());
 	}

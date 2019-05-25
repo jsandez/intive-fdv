@@ -1,6 +1,5 @@
 package sandez.com.intive.model;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class User {
@@ -23,4 +22,5 @@ public class User {
 	public void setUserId(String userId) {
 		this.userId = userId;
 	}
+
 }
