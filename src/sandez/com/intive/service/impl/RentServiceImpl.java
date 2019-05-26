@@ -1,6 +1,5 @@
 package sandez.com.intive.service.impl;
 
-import java.time.LocalDateTime;
 import java.util.List;
 
 import sandez.com.intive.discounts.Discount;
@@ -14,12 +13,13 @@ public class RentServiceImpl implements RentService {
 	private DiscountFactory discountFactory;
 
 	@Override
-	public double chargeUser(User user, LocalDateTime endDate) {
+	public double chargeUser(User user) {
 		List<Rent> rents = user.getRents();
 		double price = 0;
 		for (Rent rent : rents) {
-			price = price + rent.getRentType().charge(endDate);
+			price = price + rent.getRentType().charge(rent);
 		}
+		discountFactory = new DiscountFactory();
 		Discount discount = discountFactory.getDiscount(user);
 		if (discount != null) {
 			price = discount.applyDiscount(price);

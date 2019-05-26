@@ -17,13 +17,17 @@ public class RentTest {
 		Rent rent = new Rent();
 		rent.setPrice(0);
 		rent.setRentId("1");
-		rent.setRentType(new RentByDay(LocalDateTime.now()));
+		rent.setRentType(new RentByDay());
 		rent.setUserId("1");
+		rent.setStartDate(LocalDateTime.now());
+		rent.setEndDate(LocalDateTime.now().plusDays(2));
 
 		assertTrue(rent.getPrice() == 0);
 		assertEquals(rent.getRentId(), "1");
 		assertEquals(rent.getUserId(), "1");
 		assertNotNull(rent.getRentType());
+		assertTrue(rent.getStartDate().equals(LocalDateTime.now()));
+		assertTrue(rent.getEndDate().equals(LocalDateTime.now().plusDays(2)));
 	}
 
 }

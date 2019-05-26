@@ -1,8 +1,12 @@
 package sandez.com.intive.model;
 
+import java.time.LocalDateTime;
+
 import sandez.com.intive.rents.RentType;
 
 public class Rent {
+	private LocalDateTime startDate;
+	private LocalDateTime endDate;
 	private String rentId;
 	private String userId;
 	private RentType rentType;
@@ -38,6 +42,22 @@ public class Rent {
 
 	public void setPrice(double price) {
 		this.price = price;
+	}
+
+	public LocalDateTime getStartDate() {
+		return startDate;
+	}
+
+	public void setStartDate(LocalDateTime startDate) {
+		this.startDate = startDate;
+	}
+
+	public LocalDateTime getEndDate() {
+		return endDate;
+	}
+
+	public void setEndDate(LocalDateTime endDate) {
+		this.endDate = endDate;
 	}
 
 }

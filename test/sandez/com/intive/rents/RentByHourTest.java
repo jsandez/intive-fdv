@@ -6,13 +6,19 @@ import java.time.LocalDateTime;
 
 import org.junit.Test;
 
+import sandez.com.intive.model.Rent;
+
 public class RentByHourTest {
 
 	@Test
 	public void rentByHourTest() {
-		RentType rent = new RentByHour(LocalDateTime.now());
+		
+		RentType rentType = new RentByHour();
 		LocalDateTime endDate = LocalDateTime.now().plusHours(5);
-		double charge = rent.charge(endDate);
+		Rent rent = new Rent();
+		rent.setStartDate(LocalDateTime.now());
+		rent.setEndDate(endDate);
+		double charge = rentType.charge(rent);
 		assertTrue(charge == 25.0);
 	}
 

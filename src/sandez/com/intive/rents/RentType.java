@@ -1,14 +1,8 @@
 package sandez.com.intive.rents;
 
-import java.time.LocalDateTime;
+import sandez.com.intive.model.Rent;
 
 public abstract class RentType {
 
-	protected LocalDateTime startDate;
-
-	public RentType(LocalDateTime startDate) {
-		this.startDate = startDate;
-	}
-
-	public abstract double charge(LocalDateTime endDate);
+	public abstract double charge(Rent rent);
 }

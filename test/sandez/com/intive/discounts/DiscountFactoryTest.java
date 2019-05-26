@@ -3,7 +3,6 @@ package sandez.com.intive.discounts;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertNull;
 
-import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -27,13 +26,13 @@ public class DiscountFactoryTest {
 
 		Rent rentA = new Rent();
 		rentA.setPrice(0);
-		rentA.setRentType(new RentByDay(LocalDateTime.now()));
+		rentA.setRentType(new RentByDay());
 		rentA.setUserId("1");
 		rentA.setRentId("1");
 
 		Rent rentB = new Rent();
 		rentA.setPrice(0);
-		rentA.setRentType(new RentByHour(LocalDateTime.now()));
+		rentA.setRentType(new RentByHour());
 		rentA.setUserId("1");
 		rentA.setRentId("2");
 
@@ -55,7 +54,7 @@ public class DiscountFactoryTest {
 	public void newDiscountFactoryApplyTest() {
 		Rent rentC = new Rent();
 		rentC.setPrice(0);
-		rentC.setRentType(new RentByWeek(LocalDateTime.now()));
+		rentC.setRentType(new RentByWeek());
 		rentC.setUserId("1");
 		rentC.setRentId("3");
 

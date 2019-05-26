@@ -6,5 +6,5 @@ import sandez.com.intive.model.User;
 
 public interface RentService {
 
-	public double chargeUser(User user, LocalDateTime endDate);
+	public double chargeUser(User user);
 }
