@@ -13,7 +13,7 @@ public class RentByDayTest {
 	@Test
 	public void rentByDayTest() {
 		RentType rentType = new RentByDay();
-		LocalDateTime endDate = LocalDateTime.now().plusDays(2);
+		LocalDateTime endDate = LocalDateTime.now().plusDays(2).plusMinutes(1);
 		Rent rent = new Rent();
 		rent.setStartDate(LocalDateTime.now());
 		rent.setEndDate(endDate);

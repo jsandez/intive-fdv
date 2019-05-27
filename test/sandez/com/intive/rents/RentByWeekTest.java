@@ -14,7 +14,7 @@ public class RentByWeekTest {
 	public void rentByWeekTest() {
 
 		RentType rentType = new RentByWeek();
-		LocalDateTime endDate = LocalDateTime.now().plusWeeks(3);
+		LocalDateTime endDate = LocalDateTime.now().plusWeeks(3).plusMinutes(1);
 		Rent rent = new Rent();
 		rent.setStartDate(LocalDateTime.now());
 		rent.setEndDate(endDate);

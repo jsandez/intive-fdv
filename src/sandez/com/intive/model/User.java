@@ -3,7 +3,7 @@ package sandez.com.intive.model;
 import java.util.List;
 
 public class User {
-
+	
 	private String userId;
 	private List<Rent> rents;
 

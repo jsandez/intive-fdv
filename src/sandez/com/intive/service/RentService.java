@@ -1,10 +1,10 @@
 package sandez.com.intive.service;
 
-import java.time.LocalDateTime;
-
 import sandez.com.intive.model.User;
 
 public interface RentService {
 
-	public double chargeUser(User user);
+	public double chargeUser(String userId);
+
+	public void addOrder(User user);
 }

@@ -12,9 +12,9 @@ public class RentByHourTest {
 
 	@Test
 	public void rentByHourTest() {
-		
+
 		RentType rentType = new RentByHour();
-		LocalDateTime endDate = LocalDateTime.now().plusHours(5);
+		LocalDateTime endDate = LocalDateTime.now().plusHours(5).plusMinutes(1);
 		Rent rent = new Rent();
 		rent.setStartDate(LocalDateTime.now());
 		rent.setEndDate(endDate);
