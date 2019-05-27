@@ -12,3 +12,5 @@ The service class is the responsible for create a user with his rents and charge
 
 For the persistence, i create a Dao pattern, with a kind of queue messages that take a user with his order (rents) and push in a Queue in fifo style. Also, it shows the first element of the queue and remove them if it's neccesary to process the order and charge the user. If the user it isn't the first on the queue, it throws and exception that show who is the first user in the queue.
 Keep in mind that i do a Dummy dao with just a queue of rents, so it's not persisted in a external provider, but the idea of this was that you can implement this interface and do whatever you want inside the methods of queue, dequeue and top, ie save all in a database or even in a txt file.
+
+The tests were made with junit4 and withouth any kind of framework like mockito, so i create the objects to test all the cases. 
